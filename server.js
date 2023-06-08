@@ -77,8 +77,8 @@ app.post("/sendCode", jsonParser, (request, respond) => {
               {
                 from: "AlexeyDiplom <lecha.dolgov2004gmail.com@mail.ru>",
                 to: email,
-                subject: "Thank you for registering",
-                text: `Thank you for registering on my service ${code}`,
+                subject: "Спасибо за регистрацию",
+                text: `Спасибо за регистрацию на моем сервисе, вот ваш код: ${code}`,
               },
               (error, info) => {
                 if (error) return console.log(error);
@@ -152,7 +152,7 @@ app.post("/resetCode", jsonParser, (request, respond) => {
               {
                 from: "AlexeyDiplom <lecha.dolgov2004gmail.com@mail.ru>",
                 to: email,
-                subject: "Your reset code",
+                subject: "Ваш код для восстановления пароля: ",
                 text: `${code}`,
               },
               (error, info) => {
