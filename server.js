@@ -60,7 +60,7 @@ function readFileImage(file) {
   const buf = new Buffer.from(bitmap);
   return buf;
 }
-const data = fs.readFileSync("./Images/user-account.png");
+const data = fs.readFileSync("./images/user-account.png");
 
 app.post("/sendCode", jsonParser, (request, respond) => {
   try {
